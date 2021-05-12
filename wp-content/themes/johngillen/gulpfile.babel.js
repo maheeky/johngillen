@@ -45,12 +45,11 @@ export const reload = (cb) => {
  */
 export const watch = () => {
     gulp.watch('app/js/*.js', gulp.series(scripts, reload));
-    gulp.watch('app/scss/styles.scss', {usePolling: true}, styles);
+    gulp.watch('app/scss/**/*.scss', {usePolling: true}, styles);
     gulp.watch('**/*.php', reload);
 }
 
 export const styles = () => {
-    console.log(PROD);
     return gulp.src(paths.styles.src)
             .pipe(cssImport()) // Run all imports.
             .pipe(gulpif(!PROD, sourcemaps.init()))
