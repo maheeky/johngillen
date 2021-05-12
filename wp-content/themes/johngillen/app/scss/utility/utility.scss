@@ -1,9 +1,13 @@
 .flex-container {
     display: flex;
 }
-.frow {
+.flex-row {
     flex-direction: row;
 }
-.fcol {
+.flex-col {
     flex-direction: column;
+}
+
+.grid-container {
+    display: grid;
 }

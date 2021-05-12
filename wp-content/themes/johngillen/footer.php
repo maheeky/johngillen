@@ -6,6 +6,8 @@
  */
 wp_footer();
 ?>
+        </main> <!-- /.site-wrapper -->
+    
         <footer>
 
         </footer>

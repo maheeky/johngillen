@@ -1,0 +1,46 @@
+.nav-container {
+    margin: 1em 1em 1em 1em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.navbar {
+    width: 60%;
+    padding: 0.75em;
+    border: 1px solid red;
+    // justify-content: flex-start;
+    > ul {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        > li {
+            margin-left: 1em;
+        }
+    }
+}
+
+.nav-right {
+    flex:1;
+    justify-content: space-around;
+    > .btn {
+        display: inline-flex;
+    }
+}
+.nav-social {
+    margin-top: 0.75em;
+    > a {
+        font-size: 1.25em;
+        margin-left: 1em;
+        text-decoration: none;
+    }    
+}
+
+@media screen  // Tablet
+    and (min-width: 768px)
+    and (max-width: 1023px) {
+
+}
+
+@media screen //Phone
+    and (max-width: 768px) {
+}

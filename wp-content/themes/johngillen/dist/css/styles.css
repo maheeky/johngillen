@@ -56,11 +56,85 @@ table {
   display: flex;
 }
 
-.frow {
+.flex-row {
   flex-direction: row;
 }
 
-.fcol {
+.flex-col {
   flex-direction: column;
+}
+
+.grid-container {
+  display: grid;
+}
+
+.nav-container {
+  margin: 1em 1em 1em 1em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar {
+  width: 60%;
+  padding: 0.75em;
+  border: 1px solid red;
+}
+.navbar > ul {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.navbar > ul > li {
+  margin-left: 1em;
+}
+
+.nav-right {
+  flex: 1;
+  justify-content: space-around;
+}
+.nav-right > .btn {
+  display: inline-flex;
+}
+
+.nav-social {
+  margin-top: 0.75em;
+}
+.nav-social > a {
+  font-size: 1.25em;
+  margin-left: 1em;
+  text-decoration: none;
+}
+
+.btn {
+  border-radius: 0.25em;
+  border-width: 0.2em;
+  font-size: 1.25em;
+  padding: 0.5em;
+  width: auto;
+  height: 30px;
+}
+
+.btn-dark {
+  border: solid #272635;
+  color: #272635;
+}
+
+.btn-light {
+  border: solid #fff;
+  color: #fff;
+}
+
+.btn-aminated {
+  background-color: #272635;
+  color: #fff;
+}
+
+body {
+  font-family: "Manrope", "Nanum Gothic", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Nanum Gothic", sans-serif;
 }
 /*# sourceMappingURL=styles.css.map */

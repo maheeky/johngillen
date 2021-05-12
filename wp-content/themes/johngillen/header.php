@@ -14,10 +14,13 @@
     <?php wp_head(); ?>
     </head>
 
-    <body <?php body_class(); ?>>
+    <body <?= body_class() ?>>
         <?php wp_body_open(); ?>
 
-    <header class="site-header">
+        <?php get_template_part('template-parts/nav/navbar' ); ?>
+    
+        <header class="site-header">
+            <a class="btn btn-dark">Find out more</a>
+        </header>
 
-    </header>
-
+    <main class="grid-container site-wrapper">

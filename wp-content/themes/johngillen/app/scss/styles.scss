@@ -1,3 +1,12 @@
 @import url('./vendor/reset.scss');
 @import url('./utility/utility.scss');
 @import url('./navbar/navbar.scss');
+@import url('./components/buttons.scss');
+
+body {
+    font-family: 'Manrope', 'Nanum Gothic', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Nanum Gothic', sans-serif;
+}

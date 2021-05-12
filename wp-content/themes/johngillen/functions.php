@@ -65,5 +65,7 @@ add_action('wp_enqueue_scripts', function() {
     /**
      * Register custom fonts.
      */   
+   
     wp_enqueue_style( 'CustomFonts', 'https://fonts.googleapis.com/css2?family=Manrope:wght@300&family=Nanum+Gothic:wght@400;700;800&display=swap', [], THEMEVER );
+    wp_enqueue_style( 'fa-css', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css', [], '5.15.3' );
 });
