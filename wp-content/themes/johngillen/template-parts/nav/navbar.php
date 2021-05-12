@@ -6,8 +6,10 @@
  */
 ?>
 
-<div class="flex-container flex-row nav-container">
-    
+<div class="nav-outer flex-container flex-row">
+
+    <span class="off-canvas flex-container flex-row nav-container">
+
     <h1 class="nav-title">
         <a href="#">
             John Gillen
@@ -32,7 +34,11 @@
                 <a href="#" aria-label="Click to visit John's Instagram"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
+    </span>
+
+    
     <a href="#" class="btn btn-nav" id="nav-button">
         <i class="fas fa-bars"></i>
     </a>
+
 </div>

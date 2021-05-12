@@ -14,11 +14,13 @@
   display: grid;
 }
 
-.nav-container {
-  margin: 0.5em 0.5em 0.5em 0em;
+.nav-outer {
   width: 100%;
-  max-width: 100%;
-  display: flex;
+  margin: 0.5em 0.5em 0.5em 0em;
+}
+
+.nav-container {
+  width: 80%;
   justify-content: space-between;
 }
 
@@ -29,7 +31,7 @@
 }
 
 .navbar {
-  width: 60%;
+  flex: 0 1 auto;
   padding: 0.25em;
 }
 .navbar > ul {
@@ -48,7 +50,7 @@
 }
 
 .nav-right {
-  width: 30%;
+  flex: 0 1 auto;
   justify-content: space-around;
 }
 .nav-right > .btn {
@@ -70,6 +72,11 @@
   display: none;
 }
 
+@media screen and (max-width: 768px) {
+  .off-canvas > * {
+    display: none;
+  }
+}
 .btn {
   border-radius: 0.25em;
   border-width: 0.2em;
@@ -99,7 +106,8 @@
   color: #272635;
   font-size: 1.15em;
   padding: 0.25em 0.5em 0.25em 0.5em;
-  margin-right: 0.25em;
+  margin-right: 0.5em;
+  margin-left: auto;
 }
 
 body {

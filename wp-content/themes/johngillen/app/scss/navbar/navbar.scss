@@ -1,8 +1,9 @@
-.nav-container {
-    margin: 0.5em 0.5em 0.5em 0em;
+.nav-outer {
     width: 100%;
-    max-width: 100%;
-    display: flex;
+    margin: 0.5em 0.5em 0.5em 0em;
+}
+.nav-container {
+    width: 80%;
     justify-content: space-between;
 }
 .nav-container .nav-title > a,
@@ -11,7 +12,7 @@
     color: $dark;
 }
 .navbar {
-    width: 60%;
+    flex: 0 1 auto;
     padding: 0.25em;
     // justify-content: flex-start;
     > ul {
@@ -31,7 +32,7 @@
 }
 
 .nav-right {
-    width: 30%;
+    flex: 0 1 auto;
     justify-content: space-around;
     > .btn {
         display: inline-flex;
@@ -59,4 +60,7 @@
 
 @media screen //Phone
     and (max-width: 768px) {
+    .off-canvas > * {
+        display: none;
+    }       
 }
