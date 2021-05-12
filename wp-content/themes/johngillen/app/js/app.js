@@ -1,3 +1,2 @@
-(function($) {
-    alert("Hello3");
+(function($) { 
 })(jQuery);

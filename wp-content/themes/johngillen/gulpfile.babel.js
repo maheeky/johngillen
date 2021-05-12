@@ -60,7 +60,7 @@ export const styles = () => {
             }).on('error', sass.logError))
             .pipe(gulpif(PROD, postcss([autoprefixer])) )
             .pipe(gulpif(PROD, cleanCss({compatibility:'ie8'})) )
-            .pipe(gulpif(!PROD, sourcemaps.write(paths.styles.dest)))
+            .pipe(gulpif(!PROD, sourcemaps.write('.')))
             .pipe(gulp.dest(paths.styles.dest));
 }
 
