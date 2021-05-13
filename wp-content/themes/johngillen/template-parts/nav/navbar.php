@@ -37,7 +37,7 @@
     </span>
 
     
-    <a href="#" class="btn btn-nav" id="nav-button">
+    <a href="#" class="btn btn-nav" id="nav-button" aria-label="Open the navigation menu">
         <i class="fas fa-bars"></i>
     </a>
 
