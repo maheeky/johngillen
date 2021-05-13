@@ -8,13 +8,13 @@
 
 <div class="nav-outer flex-container flex-row">
 
-    <span class="off-canvas flex-container flex-row nav-container">
-
     <h1 class="nav-title">
         <a href="#">
             John Gillen
         </a>
     </h1>
+    <span class="off-canvas flex-container flex-row nav-container">
+
         <nav class="flex-container flex-row navbar">
         <?php
             wp_nav_menu([

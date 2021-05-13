@@ -18,9 +18,5 @@
         <?php wp_body_open(); ?>
 
         <?php get_template_part('template-parts/nav/navbar' ); ?>
-    
-        <header class="site-header">
-            <a class="btn btn-dark">Find out more</a>
-        </header>
 
     <main class="grid-container site-wrapper">
