@@ -86,8 +86,11 @@ table {
   margin: 0.5em 0.5em 0.5em 0;
 }
 
-.nav-title > a,
-.nav-container {
+.nav-title {
+  margin-left: 0.5em;
+  font-size: 1.75em;
+}
+.nav-title > a {
   text-decoration: none;
   color: #272635;
 }
@@ -103,6 +106,7 @@ table {
 }
 
 #nav-button {
+  margin-top: 0.1em;
   display: inline-block;
   z-index: 25;
   margin-right: 2em;
@@ -131,11 +135,14 @@ table {
 .off-canvas.active .navbar {
   background-color: white;
 }
-.off-canvas.active > * {
-  color: #272635;
+.off-canvas.active .navbar > ul {
+  margin-bottom: 1em;
 }
 .off-canvas.active .navbar > ul > li {
-  margin-top: 1em;
+  padding-top: 1em;
+}
+.off-canvas.active > * {
+  color: #272635;
 }
 .off-canvas.active .nav-right {
   background-color: white;
@@ -155,6 +162,7 @@ table {
 
 .nav-container.active > .navbar {
   height: 100%;
+  padding-bottom: 1em;
 }
 
 @media (min-width: 768px) {
@@ -245,8 +253,12 @@ table {
   border: solid #272635;
   color: #272635;
   font-size: 1.15em;
-  padding: 0.5em 0.5em 0 0.5em;
+  padding: 0.3em 0.3em 0 0.3em;
   margin-left: auto;
+  border-radius: 0.45em;
+}
+.btn-nav > i {
+  margin-top: 0.1em;
 }
 
 h1 {
@@ -285,6 +297,6 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: "Nanum Gothic", sans-serif;
+  font-family: "Arvo", serif;
 }
 /*# sourceMappingURL=styles.css.map */
