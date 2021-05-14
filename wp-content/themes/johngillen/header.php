@@ -20,3 +20,7 @@
         <?php get_template_part('template-parts/nav/navbar' ); ?>
 
     <main class="grid-container site-wrapper">
+
+        <header class="site-header main-header">
+
+        </header>

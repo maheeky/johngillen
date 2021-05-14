@@ -23,7 +23,6 @@
      */
     $(window).bind('resize', function() {
         if($(this).width() > 480) {
-            console.log("Hello");
             $('.off-canvas').removeClass('active');
             $('.nav-right').removeClass('active');
             $('#nav-button').removeClass('active');
