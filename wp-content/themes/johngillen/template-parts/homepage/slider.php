@@ -13,7 +13,7 @@ $content = get_field('slider_content');
             <?php if( is_array($slider) && !empty($slider) ) : ?>
                 <?php foreach($slider as $slide) : ?>
                         <div class="swiper-slide">
-                            <img src="<?= $slide['url'] ?>" alt="<?= $slide['alt'] ?>">
+                            <img src="<?= $slide['url'] ?>" alt="<?= $slide['alt'] ?>" loading="lazy">
                         </div>
                     <?php endforeach; ?>
             <?php endif; ?>
