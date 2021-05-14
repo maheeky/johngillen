@@ -25,7 +25,7 @@ $nav_class = (get_current_user_id() !== 0 ? 'is-logged-in' : '') ;?>
         ?>
         </nav><!-- /.flex-container.flex-row.navbar -->
         <div class="nav-right flex-container flex-row">
-            <a class="btn btn-dark" href="#">
+            <a class="btn btn-dark" href="#contact-form">
                 Contact John
             </a>
             <div class="nav-social">

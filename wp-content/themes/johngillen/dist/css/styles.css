@@ -73,8 +73,8 @@ table {
 }
 
 .img {
-  height: 50%;
-  position: relative;
+  height: auto;
+  width: 100%;
 }
 
 .blue {
@@ -281,9 +281,12 @@ table {
   border-width: 0.2em;
   font-size: 1.25em;
   padding: 0.5em 0.5em 1.5em 0.5em;
-  width: auto;
+  max-width: 128px;
   height: 30px;
+  padding-bottom: 2em;
   cursor: pointer;
+  text-decoration: none;
+  text-align: center;
 }
 
 .btn:hover {
@@ -399,6 +402,9 @@ body, html {
   margin-top: 1em;
   margin-bottom: 1em;
 }
+.site-wrapper > div.body-section > .btn {
+  margin-bottom: 1em;
+}
 
 .main-header {
   overflow: hidden;
@@ -446,6 +452,22 @@ body, html {
   margin-top: 3em;
   display: inline-block;
   flex: 1;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  justify-content: center;
+  margin-left: auto;
+}
+.swiper-slide img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
 }
 
 .block-image {

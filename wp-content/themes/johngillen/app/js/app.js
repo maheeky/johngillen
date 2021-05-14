@@ -21,6 +21,27 @@ import Swiper from "swiper";
             }
 
         });
+
+        let swiperContainer = document.querySelector('.swiper-container');
+
+        if(swiperContainer !== undefined ) 
+        {
+            const swiper = new Swiper('.swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                pagination: {
+                  el: ".swiper-pagination",
+                  clickable: true,
+                },
+                breakpoints: {
+                  900: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                  },
+                },
+            });
+        }
+
     });
 
     /**
@@ -38,7 +59,6 @@ import Swiper from "swiper";
         let sticky = $('.nav-outer').offset();
         if( sticky.top !== undefined ) 
         {
-            console.log(sticky.top);
             if( window.pageYOffset >= sticky.top ) {
                 $('.nav-outer').addClass('fixed-position');
             } else {
