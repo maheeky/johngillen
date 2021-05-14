@@ -27,7 +27,7 @@ if ( have_posts() ) while ( have_posts() ) 	the_post();
 
             if( $intro_image ) : ?>
                 <div class="image-wrapper">
-                    <img class="img" src="<?= $intro_image['url'] ?>" alt="<?= $alt ?>">        
+                    <img class="img" src="<?= $intro_image['url'] ?>" alt="<?= $alt ?>" loading="lazy">        
                 </div>
         <?php endif; ?>
     </div>
@@ -61,14 +61,10 @@ if ( have_posts() ) while ( have_posts() ) 	the_post();
 
             <?php if( $image ) : ?>
                 <div class="image-wrapper">
-                    <img class="img" src="<?= $image['url'] ?>" alt="<?= $alt ?>">        
+                    <img class="img" src="<?= $image['url'] ?>" alt="<?= $alt ?>" loading="lazy">        
                 </div>
             <?php endif; ?>
 
-    </div>
-
-    <div class="body-section animate-slide">
-        <!-- <img src="https://picsum.photos/seed/picsum/200/300" alt="Image of John Gillen"> -->
     </div>
 <?php
 get_footer();
