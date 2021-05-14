@@ -2,13 +2,9 @@
 /**
  * The template part for the homepage slider element.
  */
-$slider = get_field('slider_group');
-$content = get_field('slider_content');
-?>
-
-    <?= $content; ?>
-    
-    <div class="swiper-container">
+$slider = get_field('second_slider_group');
+?>    
+    <div class="swiper-container-blue">
         <div class="swiper-wrapper">
             <?php if( is_array($slider) && !empty($slider) ) : ?>
                 <?php foreach($slider as $slide) : ?>

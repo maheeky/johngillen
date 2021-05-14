@@ -24,3 +24,12 @@
 .blue {
     color: #1d8daf;
 }
+
+// Tablet
+@media (min-width: $breakpoint-tab) {
+
+    .img {
+        height: auto;
+        width: 50%;
+    }
+}

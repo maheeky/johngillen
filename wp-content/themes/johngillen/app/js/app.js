@@ -23,20 +23,29 @@ import Swiper from "swiper";
         });
 
         let swiperContainer = document.querySelector('.swiper-container');
+        let secondaryContainer = document.querySelector('.swipter-container-blue');
 
         if(swiperContainer !== undefined ) 
         {
             const swiper = new Swiper('.swiper-container', {
                 slidesPerView: 1,
                 spaceBetween: 10,
-                pagination: {
-                  el: ".swiper-pagination",
-                  clickable: true,
-                },
                 breakpoints: {
                   900: {
                     slidesPerView: 3,
                     spaceBetween: 40,
+                  },
+                },
+            });
+        }
+        if(swiperContainer !== undefined) {
+            const blueSlider = new Swiper('.swiper-container-blue', {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                breakpoints: {
+                  900: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
                   },
                 },
             });
@@ -65,7 +74,29 @@ import Swiper from "swiper";
                 $('.nav-outer').removeClass('fixed-position');
             }
         }
-
     }
+
+    $(function() {
+        $('#contact-submit').on('click', function(e){
+            e.preventDefault();
+            var data = {
+                action: 'submitcontact',
+                name: $("#name").val(),
+                phone:  $("#phone").val(),
+                email: $("#email").val(),
+            }
+
+            $.ajax({
+                method: "POST",
+                url: ajaxVariables.ajUrl,
+                data: data
+            })
+            .done(function(results) {
+
+            var errorContainer = $('.errors')
+                console.log(results);
+            });;
+        });
+    });
 
 })(jQuery);

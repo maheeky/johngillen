@@ -91,3 +91,25 @@ function jg_output_acf_group($field_title, $field_array, $default)
     }
   }
 }
+
+add_action( 'wp_ajax_submitcontact', 'submitcontact' );
+add_action( 'wp_ajax_nopriv_submitcontact', 'submitcontact' );
+
+function submitcontact() {
+
+  $pass = false;
+  $name_reg =  '/^[A-Za-z]+$/';
+  $phone_reg = '/^[0-9]+$/';
+  $email_reg = '/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/';
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $phone = $_POST['phone'];
+
+  
+  $test[] = $name;
+  $test[] = $email;
+  $test[] = $phone;
+
+  echo json_encode($test);
+  wp_die();
+}
