@@ -22,6 +22,9 @@ const paths = {
     scripts: {
         src: ['app/js/app.js'],
         dest: 'dist/js',
+    },
+    modules : {
+        src: ['./node_modules'],
     }
 }
 
@@ -55,7 +58,8 @@ export const styles = () => {
             .pipe(gulpif(!PROD, sourcemaps.init()))
             .pipe(sass({
                 style: 'compact',
-                sourcemap: true
+                sourcemap: true,
+                includePaths: [paths.modules.src],
             }).on('error', sass.logError))
             .pipe(gulpif(PROD, postcss([autoprefixer])) )
             .pipe(gulpif(PROD, cleanCss({compatibility:'ie8'})) )
@@ -76,6 +80,12 @@ export const scripts = () => {
                                 presets:[]
                             }
                         }
+                    },
+                    {
+                        test: /\.css$/i,
+                        use: [
+                            "css-loader",
+                        ],
                     }
                 ]
             },
