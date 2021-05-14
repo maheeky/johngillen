@@ -1,0 +1,35 @@
+.flex-container {
+    display: flex;
+}
+.flex-row {
+    flex-direction: row;
+}
+.flex-col {
+    flex-direction: column;
+}
+
+.grid-container {
+    display: grid;
+}
+
+.grid-item {
+    display: inline-grid;
+}
+
+.img {
+    height: auto;
+    width: 100%;
+}
+
+.blue {
+    color: #1d8daf;
+}
+
+// Tablet
+@media (min-width: $breakpoint-tab) {
+
+    .img {
+        height: auto;
+        width: 50%;
+    }
+}
