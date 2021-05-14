@@ -101,15 +101,35 @@ function submitcontact() {
   $name_reg =  '/^[A-Za-z]+$/';
   $phone_reg = '/^[0-9]+$/';
   $email_reg = '/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/';
-  $name = $_POST['name'];
-  $email = $_POST['email'];
-  $phone = $_POST['phone'];
+  $fields = [
+    'name' => $_POST['name'],
+    'phone' => $_POST['phone'],
+    'email' => $_POST['email'],
+  ];
 
-  
-  $test[] = $name;
-  $test[] = $email;
-  $test[] = $phone;
+  $errors = [];
 
-  echo json_encode($test);
+  if( preg_match($phone_reg, $fields['phone'] ) ) {
+    $errors[]['error'] = "Phone must be numeric";
+    $errors[]['container'] = "phone";
+
+  }
+  if( !reg_check($name_reg, $fields['name'] ) ) {
+    $errors[]['error'] = "Name must be alphabetical.";
+    $errors[]['container'] = "name";
+  }
+  if( !reg_check($email_reg, $fields['email'] ) ) {
+    $errors[]['error'] = "Email must valid.";
+    $errors[]['container'] = "email";
+  }
+  if( empty( $errors ) ) {
+    $errors = true; 
+  }
+
+  echo json_encode($errors);
   wp_die();
+}
+
+function reg_check($reg_string, $value) {
+  return preg_match($reg_string, $value);
 }

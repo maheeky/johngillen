@@ -20,20 +20,20 @@ wp_footer();
                     <li><strong>Email:</strong> johngillen@Nadresearch.co.uk</li>
                 </ul>
 
-                <div class="errors">
+                <ul class="errors">
 
-                </div>
+                </ul>
             
                 <form name="contact" id="contact-form" method="POST">
                     <div class="form-row" id="name-row">
-                        <input type="text" id="name" class="form-field form-text" name="name" placeholder="Name" required>
+                        <input type="text" id="name" class="form-field form-text" value="<?= isset($_POST['name']) ?? ""; ?>" name="name" placeholder="Name" required>
                     </div>
                     <div class="form-row" id="phone-row">
                         <input type="phone" id="phone" class="form-field form-phone" name="phone" placeholder="Phone number" required>
-                        <input type="text" class="form-field form-text" name="name" placeholder="Best time to call" required>
+                        <input type="text" class="form-field form-text" name="name" value="<?= isset($_POST['phone']) ?? ""; ?>" placeholder="Best time to call" required>
                     </div>
                     <div class="form-row" id="email-row">
-                        <input type="email" id="email" class="form-field form-email" name="email" placeholder="Email address" required>
+                        <input type="email" id="email" class="form-field form-email" value="<?= isset($_POST['email']) ?? ""; ?>" name="email" placeholder="Email address" required>
                     </div>
                     <div class="form-row" id="message">
                         <textarea name="message" class="form-field form-textarea" placeholder="Message"></textarea>

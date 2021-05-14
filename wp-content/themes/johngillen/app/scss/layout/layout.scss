@@ -169,6 +169,14 @@ input[type=phone] {
     }
 }
 
+.errors {
+    margin-top: 1em;
+    font-weight: 550;
+}
+.error-field {
+    border: 1px solid red;
+}
+
 // Tablet
 @media (min-width: $breakpoint-tab) {
 
@@ -182,4 +190,41 @@ input[type=phone] {
 // Tablet
 @media (min-width: $breakpoint-desk) {
 
+    .site-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin: 0em 1em 0em 1em;
+        > div.body-section {
+            display: grid;
+            > h1, h2, h3 {
+                margin-top: 1em;
+                margin-bottom: 1em;
+            } 
+            > .btn {
+                margin-bottom: 1em;
+            }
+        }
+        > .body-section {
+            > p {
+                margin-top: 1em;
+                padding-bottom: 1em;
+            }
+        }
+    }
+
+
+.main-header {
+    overflow: hidden;
+    > img {
+        border-top-right-radius: 1em;
+        border-top-left-radius: 1em;
+        background-size: cover;
+        background-position: 50% 50%; 
+        position: relative;
+    }
+    min-height: 35vw;
+    width: 100%;
+}
+
+    
 }

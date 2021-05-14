@@ -77,8 +77,14 @@ import Swiper from "swiper";
     }
 
     $(function() {
+        /**
+         * Parse data from the contact form for server side validation
+         */
         $('#contact-submit').on('click', function(e){
             e.preventDefault();
+            var errorContainer = $('.errors')
+            $('.form-row input').removeClass('error-field');
+            $('.errors').empty();
             var data = {
                 action: 'submitcontact',
                 name: $("#name").val(),
@@ -92,9 +98,18 @@ import Swiper from "swiper";
                 data: data
             })
             .done(function(results) {
+                let errors = JSON.parse(results);
 
-            var errorContainer = $('.errors')
-                console.log(results);
+                if( errors !== true && errors.length > 0 ) {
+                    for(var x in errors ) {
+                        if(errors[x].container != undefined ) {
+                            $("#"+errors[x].container).addClass("error-field");
+                        }
+                        if( errors[x].error !== undefined ) {
+                            $(errorContainer).append("<li>"+errors[x].error+"</li>");
+                        }
+                    }
+                }
             });;
         });
     });
