@@ -1,6 +1,9 @@
 import Swiper from "swiper";
 
 (function($) { 
+    window.onscroll = function() {
+        checkStickyNav();
+    }
 
     $(function() {
         $('#nav-button').click( function(e) {
@@ -30,5 +33,19 @@ import Swiper from "swiper";
             $('#nav-button').removeClass('active');
         }
     })
+
+    function checkStickyNav() {
+        let sticky = $('.nav-outer').offset();
+        if( sticky.top !== undefined ) 
+        {
+            console.log(sticky.top);
+            if( window.pageYOffset >= sticky.top ) {
+                $('.nav-outer').addClass('fixed-position');
+            } else {
+                $('.nav-outer').removeClass('fixed-position');
+            }
+        }
+
+    }
 
 })(jQuery);

@@ -1,6 +1,12 @@
 //Mobile
 .nav-outer {
+    position: relative;
+    top: 0;
     width: 100%;
+    z-index: 30;
+    background: #fff;
+}
+.nav-outer.fixed-position {
     position: sticky;
 }
 .nav-social {

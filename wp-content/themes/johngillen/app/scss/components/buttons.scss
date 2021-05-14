@@ -2,7 +2,7 @@
     border-radius: 0.25em;
     border-width: 0.2em;
     font-size: 1.25em;
-    padding: 0.5em;
+    padding: 0.5em 0.5em 1.5em 0.5em;
     width: auto;
     height: 30px;
     cursor: pointer;
@@ -32,10 +32,19 @@
     border: solid #272635;
     color: #272635; 
     font-size: 1.15em;
-    padding: 0.3em 0.3em 0 0.3em;
+    padding: 0.25em 0.4em 1.5em 0.4em;
     margin-left: auto;
     border-radius:0.45em;
     > i {
         margin-top:0.1em;
+    }
+}
+
+@media screen and (min-width: $breakpoint-tab) {
+    .btn {
+        display: inline-block;
+        min-height: 46px;
+        font-size: 1em;
+        padding-bottom: 0.5em;
     }
 }

@@ -70,3 +70,24 @@ add_action('wp_enqueue_scripts', function() {
     wp_enqueue_style( 'heading-fonts', 'https://fonts.googleapis.com/css2?family=Arvo&display=swap', [], THEMEVER );
     wp_enqueue_style( 'fa-css', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css', [], '5.15.3' );
 });
+
+/**
+ * Pass in required ACF Key from the field group, return that or a default value.
+ *
+ * @param String $field_title
+ * @param Array $field_array
+ * @param String $default
+ * @return String
+ */
+function jg_output_acf_group($field_title, $field_array, $default) 
+{
+  if( is_array($field_array) ) 
+  {
+    if( array_key_exists( $field_title, $field_array ) ) 
+    {
+      return $field_array[$field_title];
+    }  else {
+      return $default; 
+    }
+  }
+}

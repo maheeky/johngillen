@@ -4,9 +4,9 @@
  * 
  * @package johngillen
  */
-?>
+$nav_class = (get_current_user_id() !== 0 ? 'is-logged-in' : '') ;?>
 
-<div class="nav-outer flex-container flex-row">
+<div class="nav-outer flex-container flex-row <?= $nav_class ?>">
 
     <h1 class="nav-title">
         <a href="#">

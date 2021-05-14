@@ -9,21 +9,32 @@ get_header();
 if ( have_posts() ) while ( have_posts() ) 	the_post();
 ?>
 
-    <header class="site-header main-header">
-        <div class="overlay">
-            <h2>John Gillen</h2>
-            <h3>Helping the UK & Europe beat Drug & Alcohol addiction</h3>
-            <a href="/" class="btn btn-light">Find out more</a>
-        </div>    
-        <img src="https://picsum.photos/seed/picsum/200/300" alt="Image of John Gillen">
-            
+    <header class="body-section main-header">
+
+        <?php get_template_part('template-parts/homepage/hero' ); ?>
+
     </header>   
-    <div class="site-section">
-        <img src="https://picsum.photos/seed/picsum/200/300" alt="Image of John Gillen">
+
+    <div class="body-section animate-slide">
+        <h2>Who is<br><span class="blue">John Gillen?</span></h2>
+        
+        <?= get_field('intro_content'); ?>
     </div>
-    <div class="site-section animate">
+
+    <div class="body-section animate animate-slide">
         <img src="https://picsum.photos/seed/picsum/200/300" alt="Image of John Gillen">
     </div>
 
+    <div class="body-section animate-slide">
+        <img src="https://picsum.photos/seed/picsum/200/300" alt="Image of John Gillen">
+    </div>
+
+    <div class="body-section animate-slide">
+        <img src="https://picsum.photos/seed/picsum/200/300" alt="Image of John Gillen">
+    </div>
+
+    <div class="body-section animate-slide">
+        <img src="https://picsum.photos/seed/picsum/200/300" alt="Image of John Gillen">
+    </div>
 <?php
 get_footer();

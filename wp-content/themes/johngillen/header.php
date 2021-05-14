@@ -19,4 +19,4 @@
 
         <?php get_template_part('template-parts/nav/navbar' ); ?>
 
-    <main class="grid-container site-wrapper">
+    <main class="site-wrapper">
