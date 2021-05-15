@@ -39,7 +39,9 @@ wp_footer();
                         <textarea name="message" class="form-field form-textarea" aria-label="Insert your message here" placeholder="Message"></textarea>
                     </div>
                     <div class="form-row">
-                        <input type="submit" class="btn btn-animated" value="Submit" id="contact-submit" name="contact-submit">
+                        <div>
+                            <input type="submit" class="btn btn-animated" value="Submit" id="contact-submit" name="contact-submit">
+                        </div>
                     </div>
                 </form>
 

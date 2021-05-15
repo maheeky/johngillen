@@ -330,6 +330,11 @@ table {
 .btn-animated {
   background-color: #272635;
   color: #fff;
+  border: none;
+  background-image: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 
 .btn-nav {
@@ -578,6 +583,7 @@ textarea :focus {
   display: flex;
   flex-direction: column;
   padding: 0.25em;
+  overflow: auto;
 }
 #contact-form .form-row > input {
   margin-top: 0.25em;

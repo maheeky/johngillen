@@ -167,6 +167,7 @@ textarea {
         display: flex;
         flex-direction: column;
         padding: 0.25em;
+        overflow: auto;
         > input {
             margin-top: 0.25em;
             width: 100%;
