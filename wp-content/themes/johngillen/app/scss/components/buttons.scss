@@ -3,10 +3,9 @@
     border-width: 0.2em;
     font-size: 1.25em;
     padding: 0.5em 0.5em 1.5em 0.5em;
-    // width: auto;
-    max-width:128px;
     height: 30px;
     padding-bottom: 2em;
+    display: inline-block;
     cursor: pointer;
     text-decoration: none;
     text-align: center;
@@ -17,7 +16,7 @@
 .btn:active {
     background: #fff;
     transform: scale(0.99);
-    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 3px 2px 22px 1px rgba(78, 70, 70, 0.25);
 }
 .btn-dark {
     border: solid $dark;
@@ -30,6 +29,11 @@
 .btn-animated {
     background-color: #272635;
     color:#fff;
+    border:none;
+    background-image:none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
 }
 
 .btn-nav {
@@ -38,6 +42,7 @@
     font-size: 1.15em;
     padding: 0.25em 0.4em 1.5em 0.4em;
     margin-left: auto;
+    margin-top: 0.2em;
     border-radius:0.45em;
     > i {
         margin-top:0.1em;

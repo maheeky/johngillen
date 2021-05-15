@@ -30,6 +30,9 @@ body, html {
             margin-top: 1em;
             padding-bottom: 1em;
         }
+        > * > .btn {
+            margin-bottom: 1em;
+        }
     }
 }
 
@@ -64,7 +67,7 @@ body, html {
         top: 25%;
         display: flex;
         flex-direction: column;
-        width: 50%;
+        width: 90%;
         margin-top: 2em;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -127,12 +130,17 @@ body, html {
     flex-direction: column;
     justify-content: space-between;
 }
+.body-section > .main,
+.body-section > .secondary {
+    margin-top: 1em;
+}
 .two-column-text {
     padding-bottom: 1em;
 }
 footer {
     background-color: $lightblue;
     padding-top: 1em;
+    margin-top: 3em;
     > .body-section {
         margin: 1em 1em 1em 1em;
     }
@@ -143,15 +151,19 @@ footer {
 
 input[type=text],
 input[type=email],
-input[type=phone] {
+input[type=phone],
+textarea {
     width: 100%;
-    padding: 0.25em 0.5em;
+    padding: 0.75em 1em;
     margin: 0.5em 0;
     box-sizing: border-box;
+    border: 0;
+    font-family: 'Arvo', serif;
     :focus {
         border: 3px solid $dark;
     }
 }
+
 #contact-form {
     margin-top: 1em;
     padding: 1em 1em 1em 1em;
@@ -159,12 +171,23 @@ input[type=phone] {
         display: flex;
         flex-direction: column;
         padding: 0.25em;
+        overflow: auto;
         > input {
             margin-top: 0.25em;
             width: 100%;
         }
       > .btn {
             width: auto; 
+        }
+    }
+}
+footer {
+    .body-section {
+        .contact-details {
+            margin-top: 2em;
+            li {
+                margin-top: 1em;
+            }
         }
     }
 }
@@ -179,23 +202,43 @@ input[type=phone] {
 
 // Tablet
 @media (min-width: $breakpoint-tab) {
+    .hero-image {
+        .hero-content {
+            width: 75%;
+        }
+    }
 
-
+    .image-wrapper {
+        .img {
+            width: 100%;
+        }
+    }
 }
 
-
-
-
-
-// Tablet
+// Desktop
 @media (min-width: $breakpoint-desk) {
 
+    .hero-image {
+        .hero-content {
+            width:60%;
+        }
+    }
     .site-wrapper {
         display: flex;
         flex-direction: column;
         margin: 0em 1em 0em 1em;
+        margin-left: auto;
+        > .body-section > * {
+            margin: 0em 1em 0em 1em;
+            margin-left: 2em;
+        }
         > div.body-section {
-            display: grid;
+            display: flex;
+            flex-direction: row;
+            margin-left: auto;
+            > .main {
+                width: 50%;
+            }
             > h1, h2, h3 {
                 margin-top: 1em;
                 margin-bottom: 1em;
@@ -203,28 +246,64 @@ input[type=phone] {
             > .btn {
                 margin-bottom: 1em;
             }
-        }
-        > .body-section {
-            > p {
-                margin-top: 1em;
-                padding-bottom: 1em;
+            > .without-image > * {
+                flex-direction:column!important;
+            }
+            > .full-width {
+                min-width: 100%;
+                flex-direction:column!important;
             }
         }
     }
 
+    .body-section.without-image,
+    .body-section.full-width {
+            display: flex!important;
+            flex-direction: column!important;
+            flex: 1;
+            width: 100%;
+    }
 
-.main-header {
-    overflow: hidden;
-    > img {
+    .main-header {
+        overflow: hidden;
+        margin-left: auto;
+        margin-right: 1em;
+        width: 98%;
         border-top-right-radius: 1em;
         border-top-left-radius: 1em;
-        background-size: cover;
-        background-position: 50% 50%; 
-        position: relative;
+        > img {
+            background-size: cover;
+            background-position: 50% 50%; 
+            position: relative;
+        }
+        min-height: 35vw;
     }
-    min-height: 35vw;
-    width: 100%;
-}
 
-    
+    .image-wrapper {
+        .image {
+            width: 100%;
+        }
+    }
+    //Animation for body elements
+    .animate-slide {
+        opacity: 0;
+        transition: opacity ease-in-out 500ms;
+    }
+    .animate-slide.active-section {
+        opacity: 1;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        .body-section {
+            > *  {
+                display: flex;
+                flex: 1;
+                width: 50%;
+                flex-direction: column;
+                flex-basis: 100%;
+            }
+        }
+    }
 }
