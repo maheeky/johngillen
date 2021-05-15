@@ -90,6 +90,7 @@ table {
 .nav-outer {
   position: relative;
   top: 0;
+  padding-top: 1em;
   width: 100%;
   padding-bottom: 1em;
   z-index: 30;
@@ -163,7 +164,6 @@ table {
 }
 
 #nav-button {
-  margin-top: 0.1em;
   display: inline-block;
   z-index: 25;
   margin-right: 2em;
@@ -183,10 +183,10 @@ table {
   width: 100%;
   position: absolute;
   margin-top: 0;
+  padding-top: 1em;
   z-index: 2;
   color: #272635;
   background-color: white;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 .off-canvas.active .navbar {
   background-color: white;
@@ -199,6 +199,9 @@ table {
 }
 .off-canvas.active > * {
   color: #272635;
+}
+.off-canvas.active .nav-button {
+  padding-top: 1em;
 }
 .off-canvas.active .nav-right {
   background-color: white;
