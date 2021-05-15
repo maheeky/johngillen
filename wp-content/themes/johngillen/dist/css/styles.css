@@ -540,6 +540,11 @@ body, html {
   justify-content: space-between;
 }
 
+.body-section > .main,
+.body-section > .secondary {
+  margin-top: 1em;
+}
+
 .two-column-text {
   padding-bottom: 1em;
 }
@@ -627,9 +632,19 @@ footer .body-section .contact-details li {
     display: flex;
     flex-direction: column;
     margin: 0em 1em 0em 1em;
+    margin-left: auto;
+  }
+  .site-wrapper > .body-section > * {
+    margin: 0em 1em 0em 1em;
+    margin-left: 2em;
   }
   .site-wrapper > div.body-section {
-    display: grid;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+  }
+  .site-wrapper > div.body-section > .main {
+    width: 50%;
   }
   .site-wrapper > div.body-section > h1, .site-wrapper > div.body-section h2, .site-wrapper > div.body-section h3 {
     margin-top: 1em;
@@ -638,22 +653,61 @@ footer .body-section .contact-details li {
   .site-wrapper > div.body-section > .btn {
     margin-bottom: 1em;
   }
-  .site-wrapper > .body-section > p {
-    margin-top: 1em;
-    padding-bottom: 1em;
+  .site-wrapper > div.body-section > .without-image > * {
+    flex-direction: column !important;
+  }
+  .site-wrapper > div.body-section > .full-width {
+    min-width: 100%;
+    flex-direction: column !important;
+  }
+
+  .body-section.without-image,
+.body-section.full-width {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1;
+    width: 100%;
   }
 
   .main-header {
     overflow: hidden;
-    min-height: 35vw;
-    width: 100%;
-  }
-  .main-header > img {
+    margin-left: auto;
+    margin-right: 1em;
+    width: 98%;
     border-top-right-radius: 1em;
     border-top-left-radius: 1em;
+    min-height: 35vw;
+  }
+  .main-header > img {
     background-size: cover;
     background-position: 50% 50%;
     position: relative;
+  }
+
+  .image-wrapper .image {
+    width: 100%;
+  }
+
+  .animate-slide {
+    opacity: 0;
+    transition: opacity ease-in-out 500ms;
+  }
+
+  .animate-slide.active-section {
+    opacity: 1;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  footer .body-section > * {
+    display: flex;
+    flex: 1;
+    width: 50%;
+    flex-direction: column;
+    flex-basis: 100%;
   }
 }
 @font-face {

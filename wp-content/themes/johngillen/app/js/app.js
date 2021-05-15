@@ -34,11 +34,13 @@ import Swiper from "swiper";
     }
 
     $(function() {
+        const scrollableElements = document.querySelectorAll('.body-section.animate-slide');
         /**
          * Add event listener for the sticky navbar
          */
         window.onscroll = function() {
             checkStickyNav();
+            scrollAnimation();
         }
 
         $('#nav-button').click( function(e) {
@@ -56,6 +58,32 @@ import Swiper from "swiper";
                 $('#nav-button').removeClass('active');
             }
         })
+
+        /**
+         * Detect if current element is in viewport.
+         */
+        function elementsInView(element, scrollPercentage=100) {
+            let elementTop = element.getBoundingClientRect().top;
+
+            if( elementTop <= (window.innerHeight || document.documentElement.clientHeight ) * (scrollPercentage/100) ) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        /**
+         * Add class for active sections within viewport. 
+         */
+        function scrollAnimation() {
+            scrollableElements.forEach((element) => {
+                if(elementsInView(element, 100)) {
+                    element.classList.add("active-section");
+                } else {
+                    element.classList.remove("active-section");
+                }
+            });
+        }
 
         function checkStickyNav() {
             let sticky = $('.nav-outer').offset();
