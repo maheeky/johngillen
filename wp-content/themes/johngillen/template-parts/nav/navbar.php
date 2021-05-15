@@ -28,11 +28,11 @@ $nav_class = (get_current_user_id() !== 0 ? 'is-logged-in' : '') ;?>
             <a class="btn btn-dark" href="#contact-form">
                 Contact John
             </a>
-            <div class="nav-social">
-                <a href="#" aria-label="Click to visit John's Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Click to visit John's Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="Click to visit John's Instagram"><i class="fab fa-instagram"></i></a>
-            </div>
+            <ul class="nav-social">
+                <li><a href="#" aria-label="Click to visit John's Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#" aria-label="Click to visit John's Twitter"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#" aria-label="Click to visit John's Instagram"><i class="fab fa-instagram"></i></a></li>
+            </ul>
         </div>
     </span>
 

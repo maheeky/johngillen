@@ -23,20 +23,20 @@ wp_footer();
                 <ul class="errors">
 
                 </ul>
-            
+        
                 <form name="contact" id="contact-form" method="POST">
                     <div class="form-row" id="name-row">
-                        <input type="text" id="name" class="form-field form-text" value="<?= isset($_POST['name']) ?? ""; ?>" name="name" placeholder="Name" required>
+                        <input type="text" id="name" class="form-field form-text" value="<?= isset($_POST['name']) ?? ""; ?>" name="name" placeholder="Name" aria-label="Insert your name" required>
                     </div>
                     <div class="form-row" id="phone-row">
-                        <input type="phone" id="phone" class="form-field form-phone" name="phone" placeholder="Phone number" required>
-                        <input type="text" class="form-field form-text" name="name" value="<?= isset($_POST['phone']) ?? ""; ?>" placeholder="Best time to call" required>
+                        <input type="phone" id="phone" class="form-field form-phone" name="phone" placeholder="Phone number" aria-label="Insert your Phone Number" required>
+                        <input type="text" class="form-field form-text" name="name" value="<?= isset($_POST['phone']) ?? ""; ?>" placeholder="Best time to call" aria-label="If there is a best time to call, insert it here." required>
                     </div>
                     <div class="form-row" id="email-row">
-                        <input type="email" id="email" class="form-field form-email" value="<?= isset($_POST['email']) ?? ""; ?>" name="email" placeholder="Email address" required>
+                        <input type="email" id="email" class="form-field form-email" value="<?= isset($_POST['email']) ?? ""; ?>" name="email" placeholder="Email address" aria-label="Insert your e-mail address" required>
                     </div>
                     <div class="form-row" id="message">
-                        <textarea name="message" class="form-field form-textarea" placeholder="Message"></textarea>
+                        <textarea name="message" class="form-field form-textarea" aria-label="Insert your message here" placeholder="Message"></textarea>
                     </div>
                     <div class="form-row">
                         <input type="submit" class="btn btn-animated" value="Submit" id="contact-submit" name="contact-submit">
