@@ -15,12 +15,13 @@ if ( have_posts() ) while ( have_posts() ) 	the_post();
 
     </header>   
 
-    <div class="body-section animate-slide">
+    <div class="body-section animate-slide slide-up">
         <h2>Who is<br><span class="blue">John Gillen?</span></h2>
-        
-        <?= get_field('intro_content'); ?>
 
-        <a href="#contact-form" class="btn btn-dark">Contact John</a>
+            <?= get_field('intro_content'); ?>  
+            <div>
+                <a href="#contact-form" class="btn btn-dark">Contact John</a>
+            </div>
         <?php 
             $intro_image = get_field('intro_image' ); 
             $alt = (isset($intro_image['alt']) ? $intro_image['alt'] : "" );

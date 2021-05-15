@@ -30,6 +30,9 @@ body, html {
             margin-top: 1em;
             padding-bottom: 1em;
         }
+        > * > .btn {
+            margin-bottom: 1em;
+        }
     }
 }
 
@@ -64,7 +67,7 @@ body, html {
         top: 25%;
         display: flex;
         flex-direction: column;
-        width: 50%;
+        width: 90%;
         margin-top: 2em;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -133,6 +136,7 @@ body, html {
 footer {
     background-color: $lightblue;
     padding-top: 1em;
+    margin-top: 3em;
     > .body-section {
         margin: 1em 1em 1em 1em;
     }
@@ -143,15 +147,19 @@ footer {
 
 input[type=text],
 input[type=email],
-input[type=phone] {
+input[type=phone],
+textarea {
     width: 100%;
-    padding: 0.25em 0.5em;
+    padding: 0.75em 1em;
     margin: 0.5em 0;
     box-sizing: border-box;
+    border: 0;
+    font-family: 'Arvo', serif;
     :focus {
         border: 3px solid $dark;
     }
 }
+
 #contact-form {
     margin-top: 1em;
     padding: 1em 1em 1em 1em;
@@ -168,6 +176,16 @@ input[type=phone] {
         }
     }
 }
+footer {
+    .body-section {
+        .contact-details {
+            margin-top: 2em;
+            li {
+                margin-top: 1em;
+            }
+        }
+    }
+}
 
 .errors {
     margin-top: 1em;
@@ -179,8 +197,17 @@ input[type=phone] {
 
 // Tablet
 @media (min-width: $breakpoint-tab) {
+    .hero-image {
+        .hero-content {
+            width: 75%;
+        }
+    }
 
-
+    .image-wrapper {
+        .img {
+            width: 100%;
+        }
+    }
 }
 
 
@@ -190,6 +217,11 @@ input[type=phone] {
 // Tablet
 @media (min-width: $breakpoint-desk) {
 
+    .hero-image {
+        .hero-content {
+            width:60%;
+        }
+    }
     .site-wrapper {
         display: flex;
         flex-direction: column;
